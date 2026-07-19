@@ -31,6 +31,10 @@ The complete, step-by-step documentation and API endpoint specifications are mai
 
 ---
 
+## ER diagram
+![er diagram](./hosptial-ER.png)
+
+
 ## Project Setup Instructions
 
 1. Clone the repository:
