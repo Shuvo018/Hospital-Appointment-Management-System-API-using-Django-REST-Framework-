@@ -35,8 +35,8 @@ The complete, step-by-step documentation and API endpoint specifications are mai
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/Shuvo018/Hospital-Appointment-Management-System-API-using-Django-REST-Framework.git
+   cd Hospital-Appointment-Management-System-API-using-Django-REST-Framework
    ```
 
 2. Create and activate a virtual environment:
