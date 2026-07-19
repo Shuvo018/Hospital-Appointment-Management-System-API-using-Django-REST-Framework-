@@ -21,3 +21,19 @@ class CreateDoctorSerializer(serializers.ModelSerializer):
                 "This user already has a doctor profile."
             )
         return user
+    
+class DoctorListSerializer(serializers.ModelSerializer):
+    email = serializers.CharField(source="user.email", read_only=True)
+    phone_number = serializers.CharField(source="user.phone_number", read_only=True)
+
+    class Meta:
+        model = Doctor
+        fields = [
+            "id",
+            "name",
+            "department",
+            "specialization",
+            "visiting_fee",
+            "email",
+            "phone_number",
+        ]
