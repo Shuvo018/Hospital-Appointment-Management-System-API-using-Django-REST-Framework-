@@ -32,7 +32,12 @@ class FilterDoctorViewAPI(APIView):
         elif page:
             query = query.order_by(ordering)
         
-        serializer = DoctorSerializer(query, many=True)
+        paginator = PageNumberPagination()
+        paginator.page_size = 2
+        page = paginator.paginate_queryset(query, request=request)
+
+
+        serializer = DoctorSerializer(page, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
 
@@ -54,6 +59,9 @@ class FilterAppointmentViewAPI(APIView):
         elif ordering:
             query = query.order_by(ordering)
 
+        paginator = PageNumberPagination()
+        paginator.page_size = 2
+        page = paginator.paginate_queryset(query, request=request)
 
-        serializer = AppointmentSerializer(query, many=True)
+        serializer = AppointmentSerializer(page, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
