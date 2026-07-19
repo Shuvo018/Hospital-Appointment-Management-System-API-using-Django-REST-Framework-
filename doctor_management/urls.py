@@ -6,6 +6,8 @@ urlpatterns = [
     path('', DoctorAPIView.as_view(), name='doctor-list'),
     path('create/', DoctorAPIView.as_view(), name='create-doctor'),
 
-    path('<int:pk>/', DoctorDetailAPIView.as_view(), name='doctor-details')
+    path('<int:pk>/', DoctorDetailAPIView.as_view(), name='doctor-details'),
+    path('<int:pk>/', DoctorDetailAPIView.as_view(), name='doctor-update'),
+    path('<int:pk>/', DoctorDetailAPIView.as_view(), name='doctor-patch'),
 
 ]
