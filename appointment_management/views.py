@@ -10,7 +10,7 @@ from rest_framework.permissions import AllowAny
 
 class AppointmentViewAPI(APIView):
     permission_classes = [IsPatientOnly]
-    
+
     def get(self, request):
         appointments = Appointment.objects.all()
         serializer = AppointmentSerializer(appointments, many=True)
@@ -26,3 +26,16 @@ class AppointmentViewAPI(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
+
+class AppointmentDetailViewAPI(APIView):
+
+    def get(self, request, pk):
+        appointment = get_object_or_404(Appointment, pk=pk)
+        serializer = AppointmentSerializer(appointment)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+
+
+
+
+    
