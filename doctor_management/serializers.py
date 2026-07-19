@@ -1,7 +1,7 @@
 from hospital_management.models import Doctor, User
 from rest_framework import serializers
 
-class CreateDoctorSerializer(serializers.ModelSerializer):
+class DoctorCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Doctor
@@ -22,7 +22,7 @@ class CreateDoctorSerializer(serializers.ModelSerializer):
             )
         return user
     
-class DoctorListSerializer(serializers.ModelSerializer):
+class DoctorSerializer(serializers.ModelSerializer):
     email = serializers.CharField(source="user.email", read_only=True)
     phone_number = serializers.CharField(source="user.phone_number", read_only=True)
 
