@@ -121,3 +121,21 @@ http://127.0.0.1:8000/appointments/
     "status": "PENDING"
 }
 ```
+
+## appointment list
+
+http://127.0.0.1:8000/appointments/
+
+## update appointment
+
+http://127.0.0.1:8000/appointments/1/
+
+```bash
+{
+    "patient": 2,
+    "doctor": 1,
+    "appointment_date": "2026-07-22",
+    "appointment_time": "18:45:48",
+    "status": "PENDING"
+}
+```
