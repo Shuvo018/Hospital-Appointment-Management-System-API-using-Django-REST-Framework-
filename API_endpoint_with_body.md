@@ -58,3 +58,18 @@ http://127.0.0.1:8000/accounts/reset-password/
     "password": "banana1234"
 }
 ```
+
+
+## create doctor
+
+http://127.0.0.1:8000/doctors/create/
+
+```bash
+{
+    "user": 7,
+    "name": "John Doe",
+    "department": "Cardiology",
+    "specialization": "Heart Specialist",
+    "visiting_fee": 800
+}
+```
