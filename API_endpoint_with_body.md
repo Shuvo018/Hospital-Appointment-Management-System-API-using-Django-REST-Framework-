@@ -46,3 +46,15 @@ http://127.0.0.1:8000/accounts/forgot-password/
     "email": "shuvodevnath0188@gmail.com"
 }
 ```
+
+## Reset password
+
+http://127.0.0.1:8000/accounts/reset-password/
+
+```bash
+{
+    "uid": "OQ&",
+    "token": "dbzk32-69307abfeee40e4879f808263cb90b45",
+    "password": "banana1234"
+}
+```
