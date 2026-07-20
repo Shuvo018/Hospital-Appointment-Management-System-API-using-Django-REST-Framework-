@@ -97,3 +97,13 @@ http://127.0.0.1:8000/doctors/1/
     "phone_number": "0188850775"
 }
 ```
+
+## patch doctor
+
+http://127.0.0.1:8000/doctors/1/
+
+```bash
+{
+    "department": "depart abcd"
+}
+```
